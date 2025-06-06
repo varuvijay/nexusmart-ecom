@@ -34,7 +34,6 @@ NexuSmart is a modern, responsive ecommerce frontend application that provides a
 ### 🎨 **Modern UI/UX**
 - Clean, intuitive interface with smooth animations
 - Fully responsive design for all devices
-- Dark/Light mode support
 - Accessibility-first approach
 
 ### 🛒 **Shopping Experience**

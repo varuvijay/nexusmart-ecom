@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your One-Time Password (OTP)</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* White background for the email client window */
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #000000; /* Black text */
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #000000; /* Black background for the content area */
+            padding: 20px;
+            border: 1px solid #333333; /* Dark grey border */
+            box-sizing: border-box;
+        }
+        .content {
+            padding: 20px;
+            background-color: #ffffff; /* White content background */
+            color: #000000; /* Black text for content */
+            border-radius: 8px;
+        }
+        /* Header */
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eeeeee; /* Light grey separator */
+            margin-bottom: 20px;
+        }
+        .logo img {
+            max-width: 180px; /* Adjust as needed */
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .company-name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #000000; /* Black company name */
+            margin: 0;
+        }
+        /* Body */
+        .greeting, .instructions, .warning {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #333333; /* Dark grey text for instructions */
+        }
+        .greeting strong {
+            color: #000000; /* Black for emphasis */
+        }
+
+        /* OTP Display Area */
+        .otp-display-area {
+            text-align: center;
+            margin: 25px 0;
+        }
+        .otp-code {
+            font-size: 32px;
+            font-weight: bold;
+            color: #000000; /* Black OTP code */
+            text-align: center;
+            margin-bottom: 10px; /* Space between OTP and visual copy button */
+            padding: 15px;
+            background-color: #f0f0f0; /* Light grey background for OTP */
+            border: 1px dashed #cccccc; /* Lighter grey dashed border */
+            border-radius: 5px;
+            letter-spacing: 3px;
+            /* Attempt to make text easily selectable */
+            user-select: all;
+            -webkit-user-select: all;
+            -moz-user-select: all;
+            -ms-user-select: all;
+        }
+        .copy-button-visual { /* This is a visual cue, not a functional JS button */
+            display: inline-block;
+            background-color: #333333; /* Dark grey button */
+            color: #ffffff; /* White text on button */
+            padding: 8px 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 5px; /* Space above the instruction text */
+        }
+        .copy-instruction-text {
+            font-size: 13px;
+            color: #555555; /* Softer color for instruction */
+            margin-top: 8px;
+            display: block;
+            text-align: center;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 30px;
+            font-size: 12px;
+            color: #cccccc; /* Light grey footer text on black background */
+            border-top: 1px solid #333333; /* Dark grey separator */
+        }
+        .footer a {
+            color: #ffffff; /* White links in footer */
+            text-decoration: underline;
+        }
+        /* Buttons (Optional - general button style if needed elsewhere) */
+        .button {
+            display: inline-block;
+            background-color: #333333; /* Dark grey button */
+            color: #ffffff; /* White text on button */
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #555555; /* Slightly lighter grey on hover */
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 600px) {
+            .container {
+                width: 100% !important;
+                padding: 10px !important;
+            }
+            .content {
+                padding: 15px !important;
+            }
+            .company-name {
+                font-size: 24px !important;
+            }
+            .greeting, .instructions, .warning {
+                font-size: 14px !important;
+            }
+            .otp-code {
+                font-size: 26px !important;
+                padding: 12px !important;
+                margin-bottom: 8px !important;
+            }
+            .copy-button-visual {
+                padding: 7px 15px;
+                font-size: 13px;
+            }
+            .copy-instruction-text {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <div class="header">
+            <div class="logo">
+                <img src="/static/unnamed.png" alt="Logo" style="max-width: 180px; height: auto; margin-bottom: 10px;" />
+            </div>
+        </div>
+
+        <p class="greeting" >Hi ,</p>
+
+        <p class="instructions">
+            Thank you for choosing NexusMart. To complete your action, please use the One-Time Password (OTP) below.
+        </p>
+
+        <div class="otp-display-area">
+            <div class="otp-code" th:text="${otp}">
+                [OTP_CODE]
+            </div>
+            <div class="copy-button-visual">Copy OTP</div>
+            <p class="copy-instruction-text">
+                Tap or click the code above to select, then copy it.
+            </p>
+        </div>
+
+        <p class="instructions">
+            This OTP is valid for 10 minutes. Please do not share this code with anyone.
+        </p>
+
+        <p class="warning">
+            If you did not request this OTP, please ignore this email or contact our support team immediately.
+        </p>
+
+        <p class="instructions" style="margin-top: 25px;">
+            Thanks,<br/>
+            The NexusMart Team
+        </p>
+    </div>
+
+    <div class="footer">
+        <p>&copy; <span th:text="${#dates.year(#dates.createNow())}">[Current Year]</span> NexusMart. All rights reserved.</p>
+        <p>
+            NexusMart Inc., 123 Future Street, Tech City, TX 75001
+        </p>
+        <p>
+            <a th:href="@{https://www.nexusmart.com/privacy}">Privacy Policy</a> |
+            <a th:href="@{https://www.nexusmart.com/terms}">Terms of Service</a>
+        </p>
+    </div>
+</div>
+</body>
+</html>

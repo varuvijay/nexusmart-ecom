@@ -67,7 +67,7 @@ NexuSmart is a modern, responsive ecommerce frontend application that provides a
 
 
 ### 📱 Live Demo
-> **[Visit Live Demo](https://nexusmart-varuvijays-projects.vercel.app) <img src="./1.png" alt="Homepage Screenshot" width="100%"/>**
+> **[Visit Live Demo](https://nexusmart-varuvijays-projects.vercel.app) <img src="./public/1.png" alt="Homepage Screenshot" width="100%"/>**
 
 ## 🛠️ Tech Stack
 

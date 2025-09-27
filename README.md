@@ -40,7 +40,6 @@ NexuSmart is a modern, responsive ecommerce frontend application that provides a
 - Advanced product search and filtering
 - Interactive product galleries
 - Real-time cart updates
-- Wishlist functionality
 - Recently viewed products tracking
 
 ### 🔐 **User Management**

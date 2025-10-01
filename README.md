@@ -8,7 +8,7 @@
   </p>
   
   <p align="center">
-    <a href="#demo">View Demo</a> •
+    <a href="https://nexusmart-varuvijays-projects.vercel.app/">View Demo</a> •
     <a href="#features">Features</a> •
     <a href="#installation">Installation</a> •
     <a href="#usage">Usage</a> •

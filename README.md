@@ -9,10 +9,7 @@
   
   <p align="center">
     <a href="https://nexusmart-varuvijays-projects.vercel.app/">View Demo</a> •
-    <a href="#features">Features</a> •
-    <a href="#installation">Installation</a> •
-    <a href="#usage">Usage</a> •
-    <a href="#contributing">Contributing</a>
+    <a href="#features">Features</a> •    
   </p>
   
   <p align="center">
@@ -31,33 +28,15 @@ NexuSmart is a modern, responsive ecommerce frontend application that provides a
 
 ## ✨ Features
 
-### 🎨 **Modern UI/UX**
-- Clean, intuitive interface with smooth animations
-- Fully responsive design for all devices
-- Accessibility-first approach
+<div align="center">
 
-### 🛒 **Shopping Experience**
-- Advanced product search and filtering
-- Interactive product galleries
-- Real-time cart updates
-- Recently viewed products tracking
+| 🎨 **Modern UI/UX** | 🛒 **Shopping** | 🔐 **Security** |
+|:---:|:---:|:---:|
+| Clean interface<br/>Smooth animations<br/>Fully responsive<br/>Accessibility-first | Product search & filters<br/>Interactive galleries<br/>Real-time cart updates<br/>Recently viewed items | Secure authentication<br/>Profile management<br/>Order history<br/>Address book |
+| **💳 Payments** | **📱 Mobile First** | **⚡ Performance** |
+| Streamlined checkout<br/>Multiple gateways<br/>Guest checkout<br/>Order tracking | Touch-friendly UI<br/>Offline functionality<br/>Fast loading<br/>PWA support | Optimized bundles<br/>Lazy loading<br/>SSR with Next.js<br/>Caching strategies |
 
-### 🔐 **User Management**
-- Secure user authentication
-- Profile management
-- Order history tracking
-- Address book management
-
-### 💳 **Checkout & Payments**
-- Streamlined checkout process
-- Multiple payment gateway integration
-- Guest checkout option
-- Order confirmation and tracking
-
-### 📱 **Mobile Optimized**
-- Touch-friendly interface
-- Offline functionality
-- Fast loading times
+</div>
 
 ## 🚀 Demo
 
